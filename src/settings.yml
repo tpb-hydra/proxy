@@ -1,0 +1,53 @@
+backend: [194.71.107.80, 194.71.107.81, 194.71.107.82, 194.71.107.83, 194.71.107.27]
+
+static:
+  help    : help.html
+  index   : index.html
+  about   : about.html
+  policy  : policy.html
+  legal   : legal.html
+  contact : contact.html
+
+content:
+  rule_set  : clear 
+  void      : []
+  clear     :
+    iframe        : @<iframe[^>]*?>.*?</iframe>@si 
+    script        : @<script[^>]*?>.*?</script>@si
+    inline_script : @on\w+="javascript:.*();"@i
+    doodles_link  : @<a href="/doodles" title="Doodles">Doodles</a> \|@si
+    downloads_link: @<a href="/downloads" title="Downloads">Downloads</a> \|@si
+    language_link : @<a href="/language" title="Select language">Language / Select language</a> \|@si
+    cloud_link    : @<a href="/tags" title="Tag Cloud">Tag Cloud</a> \|@si
+    stats         : @<p id="footer".*>.*</p>@si
+    view_switch   :     
+      @viewswitch@: hide
+    sort_view     :       
+      @sortby">@: sortby">Name</div><div class="hide">
+    trailing_slash_2:
+      @/+"@: '"'
+    trailing_slash:  
+      @/+">@: '">'
+    empty_href:
+      @href=""@: 'href="/"'
+    order_type    :      
+      '@">Type</a>@': '" class="hide"></a><div>Type</div>'
+    hidden_elements: @<div class="hide">.*</div>@
+    ad_links_anon_dl: '@<a.*title="Anonymous Download">&nbsp;Anonymous Download</a>@i'
+    ad_links_proxy: @<div.*>.*Problems with magnets.*<\/div>@i
+    user_link     :
+      @href="/user/\w+"@: href="#"
+    tag_links     :
+      @"/tag/@: '"#" title="'
+    link_styling:
+      @<a href="http://bitcoin.org"@: '</div><div id="icons"><a href="http://bitcoin.org"'
+    rss_links:
+      @<a href="/rss" class="rss" title="RSS"><img src="/static/img/rss_small.gif" alt="RSS" /></a>@si: '<a href="http://www.kopimi.com/kopimi" target="_blank" title="Kopimi" class="sp kopimi"><span>Kopimi</span></a>'
+    blog_links:
+      @/blog/\d+@: '#'
+    tpb_tshirts:
+      @<b><a href="http://www.bytelove.com/partners/thepiratebay" title="TPB T-shirts" target="_blank">TPB T-shirts</a></b>@si: '<a href="http://www.bytelove.com/partners/thepiratebay" title="TPB T-shirts" target="_blank">TPB T-shirts</a>'
+    short_torrent_links:
+      @/torrent/871771@: "#"
+
+debug: false

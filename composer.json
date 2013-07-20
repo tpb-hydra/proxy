@@ -1,0 +1,24 @@
+{
+  "repositories": [
+    {
+       "type": "vcs",
+       "url": "/home/dc/Projects/tpb/components/ContentFixer/"
+    },
+    {
+       "type": "vcs",
+       "url": "/home/dc/Projects/tpb/components/StaticAssets/"
+    },
+    {
+       "type": "vcs",
+        "url": "/home/dc/Projects/coil/"
+    }
+  ],
+	"require": {
+		"silex/silex": "1.*",
+		"symfony/yaml": "2.4.*@dev",
+		"deralex/yaml-config-service-provider": "1.0.*@dev",
+		"asphyxia/staticassets": "*@dev",
+    "asphyxia/coil": "*@dev",
+    "asphyxia/contentfixer": "*@dev"
+	}
+}
