@@ -4,7 +4,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Asphyxia\Coil\Coil as Coil;
 
 $app = new Silex\Application();
-$app->register(new DerAlex\Silex\YamlConfigServiceProvider(__DIR__ . '/settings.yml'));
+$app->register(new DerAlex\Silex\YamlConfigServiceProvider(__DIR__ . '/../config/settings.yml'));
 $app->register(new Asphyxia\Hydra\StaticAssets(__DIR__ . '/../web/static/'));
 
 $app['debug'] = $app['config']['debug'];
