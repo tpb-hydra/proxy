@@ -1,4 +1,4 @@
-backend: [194.71.107.80, 194.71.107.81, 194.71.107.82, 194.71.107.83, 194.71.107.27]
+backend: [194.71.107.80, thepiratebay.sx, 194.71.107.27, 194.71.107.81, 194.71.107.82, 194.71.107.83]
 
 static:
   help    : help.html
@@ -20,17 +20,17 @@ content:
     language_link : @<a href="/language" title="Select language">Language / Select language</a> \|@si
     cloud_link    : @<a href="/tags" title="Tag Cloud">Tag Cloud</a> \|@si
     stats         : @<p id="footer".*>.*</p>@si
-    view_switch   :     
+    view_switch   :
       @viewswitch@: hide
-    sort_view     :       
+    sort_view     :
       @sortby">@: sortby">Name</div><div class="hide">
     trailing_slash_2:
       @/+"@: '"'
-    trailing_slash:  
+    trailing_slash:
       @/+">@: '">'
     empty_href:
       @href=""@: 'href="/"'
-    order_type    :      
+    order_type    :
       '@">Type</a>@': '" class="hide"></a><div>Type</div>'
     hidden_elements: @<div class="hide">.*</div>@
     ad_links_anon_dl: '@<a.*title="Anonymous Download">&nbsp;Anonymous Download</a>@i'
