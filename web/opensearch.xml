@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+        <ShortName>TPB Hydra proxy</ShortName>
+        <Description>Search The Pirate Bay</Description>
+        <InputEncoding>UTF-8</InputEncoding>
+        <Image height="16" width="16" type="image/x-icon">http://tpb.syncr.com.ar/favicon.ico</Image>
+        <Url type="text/html" method="GET" template="http://tpb.syncr.com.ar/search/{searchTerms}"/>
+        <SearchForm>http://tpb.syncr.com.ar/</SearchForm>
+</OpenSearchDescription>
