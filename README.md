@@ -41,11 +41,11 @@ Be sure to have installed and runnig the Vagrant VM (or configure the deploy at 
 
 ## Contact and Feedback
 
-If you'd like to contribute to the project or file a bug or feature request, please visit [its page on GitHub][1].
+If you'd like to contribute to the project or file a bug or feature request, please visit [the project page][1].
 
 ## License
 
-Coil is licensed under the [GNU GPL v3][2]([tldr][3]); that means you're allowed to copy, edit, change, hack, use all or any part of this project as you please *as long* as all parts of the project remains in the *public domain*.
+The project is licensed under the [GNU GPL v3][2] ([tldr][3]) license. Which means you're allowed to copy, edit, change, hack, use all or any part of this project *as long* as all of the changes and contributions remains under the same terms and conditions.
 
   [1]: https://github.com/tpb-hydra/proxy
   [2]: http://www.gnu.org/licenses/gpl.html
@@ -58,4 +58,4 @@ Coil is licensed under the [GNU GPL v3][2]([tldr][3]); that means you're allowed
   [9]: http://silex.sensiolabs.org
   [10]: http://getcomposer.org/
   [11]: http://www.capistranorb.com/
-  
+
