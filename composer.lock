@@ -3,37 +3,40 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6822c65ac50f124c48ff955fdab66617",
+    "hash": "a996f45a6a58c8c9c4e77124e1d199f7",
     "packages": [
         {
             "name": "asphyxia/coil",
-            "version": "dev-master",
+            "version": "v0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/asphxia/coil.git",
-                "reference": "209e761ab4cb307f09679b55b06270d3418cb4f1"
+                "reference": "v0.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/asphxia/coil/zipball/209e761ab4cb307f09679b55b06270d3418cb4f1",
-                "reference": "209e761ab4cb307f09679b55b06270d3418cb4f1",
+                "url": "https://api.github.com/repos/asphxia/coil/zipball/v0.0.3",
+                "reference": "v0.0.3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.0"
             },
+            "require-dev": {
+                "succinct/sesh": "0.*"
+            },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Asphyxia\\Coil": "src/"
+                    "Succinct\\Coil": "src/"
                 }
             },
             "description": "Coil is an abstraction layer for PHP's cURL functions.",
             "support": {
-                "source": "https://github.com/asphxia/coil/tree/master",
+                "source": "https://github.com/asphxia/coil/tree/v0.0.3",
                 "issues": "https://github.com/asphxia/coil/issues"
             },
-            "time": "2013-06-08 20:12:44"
+            "time": "2012-09-19 12:04:33"
         },
         {
             "name": "deralex/yaml-config-service-provider",
@@ -671,7 +674,6 @@
         "symfony/yaml": 20,
         "deralex/yaml-config-service-provider": 20,
         "tpb-hydra/component-sa": 20,
-        "asphyxia/coil": 20,
         "tpb-hydra/component-cf": 20
     },
     "platform": [
