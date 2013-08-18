@@ -3,7 +3,7 @@ set :deploy_to, "/var/www/"
 default_run_options[:pty] = true
 
 set :scm, :git
-set :repository,  "/home/dc/Projects/tpb/site/"
+set :repository,  "$PWD"
 set :deploy_via, :copy
 set :branch, "master"
 set :keep_releases, 3
