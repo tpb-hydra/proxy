@@ -14,39 +14,12 @@ set :user, "root"
 set :use_sudo, true
 logger.level = Logger::MAX_LEVEL
 
-namespace :deploy do
-
-    task :start do
-    end
-
-    task :stop do
-    end
-
-    task :migrate do
-    end
-
-    task :restart do
-    end
-
-end
-
-namespace :myproject do
+namespace :project do
 
     task :vendors do
-#        run "curl -s http://getcomposer.org/installer | php -- --install-dir=#{release_path}"
-#        run "cd #{release_path} && #{release_path}/composer.phar install"
+        run "curl -s http://getcomposer.org/installer | php -- --install-dir=#{release_path}"
+        run "cd #{release_path} && #{release_path}/composer.phar install"
     end
-
-    task :uploads do
-    end
-
-    task :disable do
-    end
-
-    task :enable do
-    end
-
 end
 
-after "deploy:update_code", "myproject:disable", "myproject:vendors"
-after "deploy:symlink", "myproject:uploads", "myproject:enable"
+after "deploy:update_code", "project:vendors"
