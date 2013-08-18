@@ -42,8 +42,6 @@ content:
     ad_links_proxy: @<div.*>.*Problems with magnets.*<\/div>@i
     user_link     :
       @href="/user/\w+"@: href="#"
-    tag_links     :
-      @"/tag/@: '"#" title="'
     link_styling:
       @<a href="http://bitcoin.org"@: '</div><div id="icons"><a href="http://bitcoin.org"'
     rss_links:

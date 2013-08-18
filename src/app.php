@@ -105,6 +105,12 @@ $app->error(function (Exception $e, $code) use ($app) {
 
 });
 
+$app->get('/tag/{tag}', function(Silex\Application $app, Request $request){
+
+    return Coil::get($app['backend'] . '/tag/' . $request->get('tag'));
+
+})->assert('tag', '.+');
+
 $app->after(function (Request $request, Response $response) use ($app) {
     return $response->setContent(
         $app['fixer']->fix($response->getContent())
