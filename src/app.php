@@ -84,9 +84,15 @@ $app->get('/torrent/{id}/{name}', function(Silex\Application $app, Request $requ
 
 $app->get('/s/', function(Silex\Application $app, Request $req) {
 
-    return Coil::get($app['backend'] . '/search/' . str_replace(' ', '+', $req->get('q')) . '/');
+    return $app->redirect('/search/' . str_replace(' ', '+', $req->get('q')));
 
 });
+
+$app->get('/search/{search}', function(Silex\Application $app, Request $request){
+
+    return Coil::get($app['backend'] . '/search/' . str_replace(' ', '+', $request->get('search')));
+
+})->assert('search', '.*');
 
 $app->error(function (Exception $e) use ($app) {
   if ($app['debug']) {
