@@ -2,23 +2,23 @@
   "repositories": [
     {
        "type": "vcs",
-       "url": "/home/dc/Projects/tpb/components/ContentFixer/"
+       "url": "git@github.com:tpb-hydra/component-cf"
     },
     {
        "type": "vcs",
-       "url": "/home/dc/Projects/tpb/components/StaticAssets/"
+       "url": "git@github.com:tpb-hydra/component-sa"
     },
     {
        "type": "vcs",
-        "url": "/home/dc/Projects/coil/"
+        "url": "git@github.com:asphxia/coil"
     }
   ],
-	"require": {
-		"silex/silex": "1.*",
-		"symfony/yaml": "2.4.*@dev",
-		"deralex/yaml-config-service-provider": "1.0.*@dev",
-		"asphyxia/staticassets": "*@dev",
-    "asphyxia/coil": "*@dev",
-    "asphyxia/contentfixer": "*@dev"
-	}
+    "require": {
+        "silex/silex": "1.*",
+        "symfony/yaml": "2.4.*@dev",
+        "deralex/yaml-config-service-provider": "1.0.*@dev",
+        "tpb-hydra/component-sa": "*@dev",
+        "asphyxia/coil": "*@dev",
+        "tpb-hydra/component-cf": "*@dev"
+    }
 }
