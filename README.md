@@ -45,7 +45,7 @@ If you'd like to contribute to the project or file a bug or feature request, ple
 
 ## License
 
-Coil is licensed under the [GNU GPL v3][2]([tldr][3]); that means you're allowed to copy, edit, change, hack, use all or any part of this project as you please *as long* as all parts of the project remains in the *public domain*.
+Coil is licensed under the [GNU GPL v3][2] ([tldr][3]) that means you're allowed to copy, edit, change, hack, use all or any part of this project as you please *as long* as all parts of the project remains in the *public domain*.
 
   [1]: https://github.com/tpb-hydra/proxy
   [2]: http://www.gnu.org/licenses/gpl.html
