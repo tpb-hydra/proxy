@@ -55,7 +55,7 @@ Coil is licensed under the [GNU GPL v3][2]([tldr][3]); that means you're allowed
   [6]: http://nginx.com/
   [7]: https://www.varnish-cache.org/
   [8]: http://php-fpm.org/
-  [9]: silex.sensiolabs.org
+  [9]: http://silex.sensiolabs.org
   [10]: http://getcomposer.org/
   [11]: http://www.capistranorb.com/
   
