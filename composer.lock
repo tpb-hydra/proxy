@@ -3,40 +3,37 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "a996f45a6a58c8c9c4e77124e1d199f7",
+    "hash": "02fe484a1bf5e4bb1dc0417a4b2df9f9",
     "packages": [
         {
             "name": "asphyxia/coil",
-            "version": "v0.0.3",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/asphxia/coil.git",
-                "reference": "v0.0.3"
+                "reference": "v0.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/asphxia/coil/zipball/v0.0.3",
-                "reference": "v0.0.3",
+                "url": "https://api.github.com/repos/asphxia/coil/zipball/v0.0.4",
+                "reference": "v0.0.4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.0"
-            },
-            "require-dev": {
-                "succinct/sesh": "0.*"
+                "php": ">=5.3.0"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Succinct\\Coil": "src/"
+                    "Asphyxia\\Coil": "src/"
                 }
             },
             "description": "Coil is an abstraction layer for PHP's cURL functions.",
             "support": {
-                "source": "https://github.com/asphxia/coil/tree/v0.0.3",
+                "source": "https://github.com/asphxia/coil/tree/v0.0.4",
                 "issues": "https://github.com/asphxia/coil/issues"
             },
-            "time": "2012-09-19 12:04:33"
+            "time": "2013-08-18 05:54:20"
         },
         {
             "name": "deralex/yaml-config-service-provider",

@@ -18,7 +18,7 @@
         "symfony/yaml": "2.4.*@dev",
         "deralex/yaml-config-service-provider": "1.0.*@dev",
         "tpb-hydra/component-sa": "*@dev",
-        "asphyxia/coil": "*",
+        "asphyxia/coil": "0.0.4",
         "tpb-hydra/component-cf": "*@dev"
     }
 }
