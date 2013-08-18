@@ -89,11 +89,13 @@ $app->get('/s/', function(Silex\Application $app, Request $req) {
 });
 
 $app->error(function (Exception $e) use ($app) {
+  if ($app['debug']) {
+    die($e->getMessage());
+  }
+
   if ($e instanceof NotFoundHttpException) {
     return $app['static']->fetch('404.html');
   }
-
-  echo $e->getMessage();
 
   return $app['static']->fetch('500.html');
 
