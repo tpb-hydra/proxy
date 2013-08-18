@@ -82,10 +82,18 @@ $app->get('/torrent/{id}/{name}', function(Silex\Application $app, Request $requ
 })->value('name', '')
   ->assert('id', '\d+');
 
+$app->get('/s/', function(Silex\Application $app, Request $req) {
+
+    return Coil::get($app['backend'] . '/search/' . str_replace(' ', '+', $req->get('q')) . '/');
+
+});
+
 $app->error(function (Exception $e) use ($app) {
   if ($e instanceof NotFoundHttpException) {
     return $app['static']->fetch('404.html');
   }
+
+  echo $e->getMessage();
 
   return $app['static']->fetch('500.html');
 

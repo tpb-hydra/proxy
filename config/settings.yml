@@ -54,5 +54,7 @@ content:
       @<a href="http://www.bytelove.com/partners/thepiratebay" title="TPB T-shirts" target="_blank">TPB T-shirts</a>@si: '<a href="http://piratebrowser.com" title="PirateBrowser" target="_blank"><strong>PirateBrowser</strong></a>'
     short_torrent_links:
       @/torrent/\d/+@si: "#"
+    search_url:
+      @action="/s"@si: 'action="/s/"'
 
 debug: false
