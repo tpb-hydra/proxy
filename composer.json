@@ -14,11 +14,11 @@
     }
   ],
     "require": {
-        "silex/silex": "1.*",
-        "symfony/yaml": "2.4.*@dev",
-        "deralex/yaml-config-service-provider": "1.0.*@dev",
-        "tpb-hydra/component-sa": "*@dev",
+        "silex/silex": "~1.0",
+        "symfony/yaml": "2.3.3",
+        "igorw/config-service-provider": "1.2.1",
         "asphyxia/coil": "0.0.4",
-        "tpb-hydra/component-cf": "*@dev"
+        "tpb-hydra/component-cf": "0.0.1",
+        "tpb-hydra/component-sa": "0.0.1"
     }
 }

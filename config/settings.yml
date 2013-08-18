@@ -1,6 +1,7 @@
-backend: [thepiratebay.sx, 194.71.107.80, 194.71.107.27, 194.71.107.81, 194.71.107.82, 194.71.107.83]
+backend: [thepiratebay.sx, 194.71.107.27, 194.71.107.80, 194.71.107.81, 194.71.107.82, 194.71.107.83]
+debug: false
 
-static:
+assets:
   help    : help.html
   index   : index.html
   about   : about.html
@@ -9,15 +10,15 @@ static:
   contact : contact.html
 
 content:
-  rule_set  : clear 
+  rule_set  : clear
   void      : []
   clear     :
     iframe        : @<iframe[^>]*?>.*?</iframe>@si
     script        : @<script[^>]*?>.*?</script>@si
     inline_script : @on\w+="javascript:.*();"@i
-    login	  : @<a href="/login" title="Login">Login</a> \|@si
+    login         : @<a href="/login" title="Login">Login</a> \|@si
     register      : @<a href="/register" title="Register">Register</a> \|@si
-    forum	  :
+    forum         :
         @<a href="http://suprbay.org" title="Forum" target="_blank">Forum</a> \|@si: '<a href="http://suprbay.org" title="Forum" target="_blank">Forum</a><br />'
 
     doodles_link  : @<a href="/doodles" title="Doodles">Doodles</a> \|@si
@@ -55,4 +56,3 @@ content:
     search_url:
       @action="/s"@si: 'action="/s/"'
 
-debug: false

@@ -2,28 +2,29 @@
 require_once __DIR__.'/../vendor/autoload.php';
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Silex\Application;
+use Igorw\Silex\ConfigServiceProvider;
 use Asphyxia\Coil\Coil as Coil;
-use Hydra\Component\StaticAssets;
-use Hydra\Component\ContentFixer;
+use Hydra\Component\StaticAssets\StaticAssets as StaticAssets;
+use Hydra\Component\ContentFixer\ContentFixer as ContentFixer;
 
 $app = new Silex\Application();
-$app->register(new DerAlex\Silex\YamlConfigServiceProvider(__DIR__ . '/../config/settings.yml'));
-$app->register(new StaticAssets\StaticAssets(__DIR__ . '/../web/static/'));
+$app->register(new ConfigServiceProvider(__DIR__ . '/../config/settings.yml'));
+$app->register(new StaticAssets(__DIR__ . '/../web/static/'));
 
-$app['debug']   = $app['config']['debug'];
-$app['backend'] = $app['config']['backend'][0];
-$ruleSet       = $app['config']['content']['rule_set'];
-$app->register(new ContentFixer\ContentFixer($app['config']['content'][$ruleSet]));
+$app['backend'] = $app['backend'][0];
+$ruleSet        = $app['content']['rule_set'];
+$app->register(new ContentFixer($app['content'][$ruleSet]));
 
 $app->get('/', function (Silex\Application $app, Request $request) {
-    return $app['static']->fetch($app['config']['static']['index']);
+    return $app['static']->fetch($app['assets']['index']);
 });
 
 $app->get('/{page}', function(Silex\Application $app, Request $request) {
     $page = $request->get('page');
 
-    if (in_array($page, array_keys($app['config']['static']))) {
-        return $app['static']->fetch($app['config']['static'][$page]);
+    if (in_array($page, array_keys($app['assets']))) {
+        return $app['static']->fetch($app['assets'][$page]);
     } else {
         return Coil::get($app['backend'] . '/' . $page);
     }
