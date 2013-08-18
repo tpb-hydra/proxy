@@ -92,18 +92,16 @@ $app->get('/search/{search}', function(Silex\Application $app, Request $request)
 
     return Coil::get($app['backend'] . '/search/' . str_replace(' ', '+', $request->get('search')));
 
-})->assert('search', '.*');
+})->assert('search', '.+');
 
-$app->error(function (Exception $e) use ($app) {
+$app->error(function (Exception $e, $code) use ($app) {
   if ($app['debug']) {
     die($e->getMessage());
   }
 
-  if ($e instanceof NotFoundHttpException) {
-    return $app['static']->fetch('404.html');
-  }
+  $code = ($code == 404) ? $code : 500;
 
-  return $app['static']->fetch('500.html');
+  return $app['static']->fetch($code . '.html');
 
 });
 
